@@ -13,7 +13,12 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/jquery.dataTables.css') }}" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/dataTables.bootstrap.css') }}" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/selectize.css') }}" rel='stylesheet' type='text/css'>
+    <link href="{{ asset('css/selectize.bootstrap3.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
@@ -71,10 +76,16 @@
                 </div>
             </div>
         </nav>
-
+        {{-- @include('layouts._flash') --}}
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/dataTables.bootstrap.min.js"></script>
+    <script src="/js/selectize.min.js"></script>
+    @yield('scripts')
 </body>
 </html>
